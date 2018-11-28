@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 
-class Fizz extends Component {
+
     
     
-  render() {
-      
+
+
+ const Fizz = (props) => {
     return (
-      <li>123</li>
+      <div>{props.count}</div>
     )
-  }
-}
+ }
 
 
-export default Fizz
+ export default Fizz

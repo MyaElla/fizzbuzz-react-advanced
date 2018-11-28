@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Fizz from './Fizz'
 
 class Counter extends Component {
   state = {
@@ -23,6 +24,7 @@ class Counter extends Component {
         <button className="decrement" onClick={this.decrement}>
           Decrement count
         </button>
+        <Fizz count={1} />
       </div>
     );
   }
