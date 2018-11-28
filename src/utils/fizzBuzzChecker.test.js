@@ -25,4 +25,7 @@ describe("Counter component", () => {
       expect(fizzBuzzChecker(7)).toBe("");
       expect(fizzBuzzChecker(19)).toBe("");
     });
+    test("display Number too big if number bigger than 100 ", () => {
+      expect(fizzBuzzChecker(101)).toBe("Number too big");
+    });
 });
