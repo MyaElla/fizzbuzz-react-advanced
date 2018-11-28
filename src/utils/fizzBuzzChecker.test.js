@@ -13,6 +13,12 @@ describe("Counter component", () => {
        expect(fizzBuzzChecker(5)).toBe("Buzz");
        expect(fizzBuzzChecker(10)).toBe("Buzz");
        expect(fizzBuzzChecker(20)).toBe("Buzz");
+     }); 
+
+     test("display FizzBuzz for multiple of both 3 and 5", () => {
+       expect(fizzBuzzChecker(15)).toBe("FizzBuzz");
+       expect(fizzBuzzChecker(30)).toBe("FizzBuzz");
+       expect(fizzBuzzChecker(45)).toBe("FizzBuzz");
      });
 
     test("display blank for non multiple of either 3 or 5 ", () => {
