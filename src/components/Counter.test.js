@@ -4,11 +4,11 @@ import { shallow } from "enzyme";
 
 describe("Counter component", () => {
 
-  it("starts with a count of 0", () => {
+  it("starts with a count of 1", () => {
     const wrapper = shallow(<Counter />);
     // from a user's perspective - testing the output
     const text = wrapper.find("p").text();
-    expect(text).toEqual("Current count: 0");
+    expect(text).toEqual("Current count: 1");
   });
 
     it("can increment the count when the button is clicked", () => {
@@ -16,15 +16,15 @@ describe("Counter component", () => {
       const incrementBtn = wrapper.find("button.increment");
       incrementBtn.simulate("click");
       const text = wrapper.find("p").text();
-      expect(text).toEqual("Current count: 1");
+      expect(text).toEqual("Current count: 2");
     });
 
-     it("can decrement the count when the decrement button is clicked", () => {
+     it("when value is the min 1 and decrement button is clicked count stops at 1", () => {
        const wrapper = shallow(<Counter />);
        const decrementBtn = wrapper.find("button.decrement");
        decrementBtn.simulate("click");
        const text = wrapper.find("p").text();
-       expect(text).toEqual("Current count: -1");
+       expect(text).toEqual("Current count: 1");
      });
 
 });
