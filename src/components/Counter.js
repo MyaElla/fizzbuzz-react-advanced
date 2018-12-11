@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import {observer} from 'mobx-react';
+import store from '../stores/CounterStore.js';
 import fizzBuzzChecker from "../utils/fizzBuzzChecker";
 // import Fizz from './Fizz'
 
@@ -33,5 +35,15 @@ class Counter extends Component {
   }
 }
 
-export default Counter;
+export default Counter
+
+// const Counter = () => (
+//   <div>
+//     <button onClick={() => store.increment()}>+1</button>
+//     <span>{store.counter}</span>
+//     <button onClick={() => store.decrement()}>-1</button>
+//   </div>
+// );
+
+// export default observer(Counter);
 
